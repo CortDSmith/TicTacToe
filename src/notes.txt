@@ -1,0 +1,153 @@
+# Notes of what I've learned about javaScript and ReactJS
+
+App.js is simply a static module for rendering a page.
+Index.js is where the rendering is done. 
+    e.g. the Entrypoint of ReactJS.
+
+I can create modules in the form of somefile.js
+and import them into index.js for rendering by typing
+    import somefile from './somefile';
+
+JavaScript Variable Types
+    # Data Types
+    undefined   : typeof instance === "undefined"
+    Boolean     : typeof instance === "boolean"
+    Number      : typeof instance === "number"
+    String      : typeof instance === "string"
+    BigInt      : typeof instance === "bigint"
+    Symbol      : typeof instance === "symbol"
+
+    # Number and BigInt
+    +Infinite
+    -Infinite
+    NaN
+    
+    # Structural Types
+    Object      : typeof instance === "object"
+        Special non-data but Structural type for any constructed object instance
+        also used as data structure: new Object, new Array, new Map, new Set, 
+        new WeakMap, new WeakSet, new Date, and almost everything with new keyword.
+    Function    : typeof instance === "function"
+        A non-data structure, though it also answers for typeof. This is merely a 
+        special shorthand for Functions, though every Function constructor is 
+        derived from Object constructor.
+    
+    # Structural Root Primitive
+    null        : typeof instance === "object"
+        Special primitive type having additional usage for its value: if object is 
+        not inherited, then null is shown.
+
+JavaScript Comparison Operators
+    # Primary Expressions
+    this
+    function
+    class
+    function*
+    yield
+    yield*
+    async function
+    await
+    []
+    {}
+    /ab+c/i
+    ( )
+
+    # Left-hand-side Expressions
+    Property accessors
+        object.property and object["property"]
+    new
+        Creates an instance of a constructor.
+    new.target
+        In constructors, new.target refers to the constructor that was invoked by new.
+    import.meta
+        An object exposing context-specific metadata to a JavaScript module.
+        It is used to show a javascript modules' metadata; e.g. information about 
+        the module.
+    super
+        The super keyword calls the parent constructor.
+    ...obj
+        Spread syntax allows an expression to be expanded in places where multiple 
+        arguments (for function calls) or multiple elements (for array literals) 
+        are expected.
+        Example: function (x,y,z) {return x+y+z;}
+                const numbers = [1, 2, 3];
+                sum(...numbers)
+                # output: 6
+                # ...numbers returns each value within numbers.
+                # Therefore calling the function "sum" with inputs: 1, 2, 3.
+
+    # Increment and Decrement Operators
+    #   Postfix
+    A++
+    A--
+    #   Prefix
+    ++A
+    --A
+
+    # Unary Operators
+    delete
+        Deletes a property from an object.
+    void
+        discards an expressions return value.
+    typeof
+        determines the type of a given object.
+    +
+        converts its operand to Number type.
+    -
+        like (+), and then negates it.
+    ~
+        Bitwise NOT operator.
+    !
+        Logical NOT operator.
+    
+    # Arithmetic operators
+    +
+    -
+    /
+    *
+    %
+    **
+
+    # Relational operators
+    in
+        determines whether an object has a given property.
+    instanceof
+        determines whether an object is an instance of another object.
+    <
+    >
+    <=
+    >=
+
+    # Equality operators
+    #   Equality/Inequality
+    ==
+    !=
+    #   Identity/Non-Identity
+    ===
+    !==
+
+    # Bitwise Shift operator
+    <<
+    >>
+    >>>
+        Bitwise unsigned right shift
+    
+    # Binary Bitwise operator
+    &
+    |
+    ^
+
+    # Binary Logical operator
+    &&
+    ||
+    ??
+        Nullish Coalescing operator.
+        If left of operand is null, return right of operand.
+        Example: const foo = null ?? 'some string';
+                foo;
+                // output: 'some string'
+                // because left operand is null or false.
+
+
+
+
